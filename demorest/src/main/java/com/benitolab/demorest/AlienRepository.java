@@ -25,4 +25,15 @@ public class AlienRepository {
 	public List<Alien> getAliens(){
 		return aliens;
 	}
+	
+	public Alien getAlen(int id) {
+		
+		for (Alein a: aliens) {
+			if(a.getId==id) {
+				return a
+			}
+		}
+		return null;
+	}
+	
 }

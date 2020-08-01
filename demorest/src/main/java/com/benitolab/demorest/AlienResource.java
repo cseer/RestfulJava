@@ -11,20 +11,15 @@ import javax.ws.rs.core.MediaType;
 @Path("/alienresource")
 public class AlienResource {
 	
+	AlienRepository repo = new AlienRepository();
+	
     @GET 
     @Produces(MediaType .APPLICATION_XML)
 	public List<Alien> getAliens() {
-		Alien a1 = new Alien();
-		a1.setName("Carlos");
-		a1.setPoints(95);	
-				
-		Alien a2 = new Alien();
-		a2.setName("Benito");
-		a2.setPoints(99);	
+        
+    	AlienRepository ar = new AlienRepository();
+    	return ar.getAliens();  
 		
-		List<Alien> aliens = Arrays.asList(a1,a2);
-		
-		return aliens;
 	}
 	
 }
